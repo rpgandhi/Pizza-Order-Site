@@ -9,19 +9,33 @@
   </head>
   <body>
     <div class="container">
+
       <form id="pizzaForm">
+
         <div class="row">
          <div class="col-md-6">
+
            <h3>Please enter your name:</h3>
 
              <div class="form-group">
                <label for="newName">Name:</label>
                <input type="text" class="form-control" id="newName">
              </div>
+
+             <div class="form-group">
+               <label for="newSize">Size:</label>
+               <input type="text" class="form-control" id="newSize">
+             </div>
+
+             <div class="form-group">
+               <label for="newTopping">Topping:</label>
+               <input type="text" class="form-control" id="newTopping">
+             </div>
+
            </div>
          </div>
 
-        <h3>Please choose your pizza size:</h3>
+        <!-- <h3>Please choose your pizza size:</h3>
         <div class="radio">
           <label>
             <input type="radio" name="size" value="small" checked>
@@ -46,15 +60,22 @@
           <input type="checkbox" name="toppings" value="bike"> Pepperoni<br>
           <input type="checkbox" name="toppings" value="car">Mushrooms<br>
           <input type="checkbox" name="toppings" value="carpool">Olives<br>
-        </div>
+        </div> -->
 
       <button type="submit" class="btn">Make my pizza!</button>
 
-    <!-- </form> -->
+      <div>
+          <p>Thanks for your order! Your pizza will be ready for pickup in 20 minutes. Please see your confirmation below:</p>
+        <ul id="orderConfirmation">
 
-      <div id="orderConfirmation">
-        <p>Thanks for your order! We will begin making your pizza momentarily.</p>
+
+        </ul>
+
+        <!-- <div id="orderNameConfirmation">
+        </div> -->
+
       </div>
+
     </form>
     </div>
   </body>
