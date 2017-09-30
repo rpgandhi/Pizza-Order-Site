@@ -69,19 +69,59 @@ function Pizza (name, size, topping) {
   this.name = name;
   this.size = size;
   this.topping = topping;
+  this.cost = [];
+  this.grandTotal = [];
+}
+
+
+Pizza.prototype.getOrderNumber=function(min, max) {
+  min = Math.ceil(111111);
+  max = Math.floor(999999);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
 
 $(document).ready(function() {
+
+  $(".chooseSize").change(function() {
+  if ($(this).is(':checked')) {
+
+	var sizeCost = ($(this).val());
+
+  newOrder.cost.push(sizeCost);
+  alert(sizeCost);
+
+  }
+});
+
+
+  // var inputtedName = $("input#newName").val();
+  // var inputtedSize = $("input#newSize").val();
+  // var inputtedTopping = $("input#newTopping").val();
+  // var inputtedSizeCost = parseInt($("input:radio[name=small]:checked").val());
+  // var inputtedSizeInt = parseInt(inputtedSizeCost);
+  // var newOrder = new Pizza(inputtedName, inputtedSize, inputtedTopping);
+
+
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
 
     var inputtedName = $("input#newName").val();
     var inputtedSize = $("input#newSize").val();
     var inputtedTopping = $("input#newTopping").val();
+    var inputtedSizeCost = $("input[type=radio][name=small][id=small]:checked").val();
+    var orderNum = Pizza.prototype.getOrderNumber();
+    alert(orderNum);
+
 
     var newOrder = new Pizza(inputtedName, inputtedSize, inputtedTopping);
+    alert(inputtedSizeCost);
+    newOrder.cost.push(inputtedSizeCost);
+
+    alert(inputtedSizeCost);
+
+
 
     $("ul#orderConfirmation").append("<li><span class='contact'>" + newOrder.name + "</span></li>");
     $("ul#orderConfirmation").append("<li><span class='contact'>" + newOrder.size + "</span></li>");
