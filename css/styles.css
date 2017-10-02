@@ -1,34 +1,7 @@
-/*#orderConfirmation {
+#orderConfirmation {
   display:none;
-}*/
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-".rust.source":
-  "bracket-matcher":
-    autocompleteCharacters: [
-      "()"
-      "[]"
-      "{}"
-      "<>"
-      "\"\""
-      "``"
-    ]
+body {
+  background-color: #2edb87;
+}
