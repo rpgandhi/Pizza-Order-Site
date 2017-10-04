@@ -29,59 +29,59 @@
         <h3>Please choose your pizza size:</h3>
         <div class="radio">
           <label>
-            <input type="radio" class="chooseSize" name="size" id="small" value="small">
+            <input type="radio" class="chooseSize" name="size" id="small" value="Small">
             Small $8
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" class="chooseSize" name="size" id="med" value="medium">
+            <input type="radio" class="chooseSize" name="size" id="med" value="Medium">
             Medium $10
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" class="chooseSize" name="size" id="large" value="large">
+            <input type="radio" class="chooseSize" name="size" id="large" value="Large">
             Large $12
           </label>
         </div>
 
-        <br><h3>Please choose your toppings below (toppings are an additional $2 each):</h3>
+        <br><h3>Please choose your toppings below (toppings are an additional $1 each):</h3>
 
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=1 name="toppings" value="pep">
+            <input type="checkbox" name="toppings" value="Pepperoni">
             Pepperoni
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=2 name="toppings" value="mush">
+            <input type="checkbox" name="toppings" value="Mushrooms">
             Mushrooms
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=3 name="toppings" value="olive">
+            <input type="checkbox" name="toppings" value="Olives">
             Olives
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=4 name="toppings" value="jal">
+            <input type="checkbox" name="toppings" value="Jalapenos">
             Jalapenos
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=5 name="toppings" value="onion">
+            <input type="checkbox" name="toppings" value="Onions">
             Onions
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value=6 name="toppings" value="pepper">
-            Peppers
+            <input type="checkbox" name="toppings" value="Green Peppers">
+            Green Peppers
           </label>
         </div>
         <br>
@@ -93,6 +93,11 @@
 
       <div id="orderConfirmation">
           <p>Thanks for your order! Your pizza will be ready for pickup in 20 minutes. Please see your confirmation below:</p>
+          <p>Name: <span id="pName"></span></p>
+          <p>Order number: <span id="pOrder"></span></p>
+          <p>Pizza size: <span id="pSize"></span></p>
+          <p>Toppings: <span id="pToppings"></span></p>
+          <p>Total price: $<span id="pTotal"></span></p>
       </div>
     </div>
 
